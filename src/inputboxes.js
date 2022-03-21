@@ -43,7 +43,6 @@ function inputBoxes(){
                 option.text = val.charAt(0).toUpperCase() + val.slice(1);
                 priority.appendChild(option);
             }
-     
     const prioritylabel = document.createElement("Label");
     prioritylabel.setAttribute("for", priority);
     prioritylabel.innerHTML = "Priority: ";
