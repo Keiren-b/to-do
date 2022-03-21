@@ -1,8 +1,10 @@
+import print from './printToDo'
 
-import collectInputs from './todoInput'
+let content = document.getElementById('content')
+let inputContainer = document.createElement('div')
+inputContainer.setAttribute('id', 'inputContainer')
 function inputBoxes(){
-    let content = document.getElementById('content')
-    let inputContainer = document.createElement('div')
+
 
     const title = document.createElement("input");
     title.type = "text";
@@ -56,12 +58,18 @@ function inputBoxes(){
 
     const submitBtn = document.createElement('button')
     submitBtn.textContent = "Add To-Do"
-    submitBtn.addEventListener('click', collectInputs)
+    submitBtn.setAttribute('id', 'printBtn')
     inputContainer.appendChild(submitBtn)
 
-      
     content.appendChild(inputContainer)
-}
+
+    submitBtn.addEventListener('click', print)
+
+    
+     
+      }
+
+
 
 export default inputBoxes
 
