@@ -1,10 +1,11 @@
 //Creates the input boxes when Add New To-Do button is pressed
 import print from './printToDo'
+import collectInputs from './todoInput'
 
 let content = document.getElementById('content')
 let inputContainer = document.createElement('div')
 inputContainer.setAttribute('id', 'inputContainer')
-function inputBoxes(){
+function createinputBoxes(){
 
 
     const title = document.createElement("input");
@@ -70,7 +71,7 @@ function inputBoxes(){
 
     content.appendChild(inputContainer)
 
-    submitBtn.addEventListener('click', print)
+    submitBtn.addEventListener('click', collectInputs)
 
     
      
@@ -78,5 +79,5 @@ function inputBoxes(){
 
 
 
-export default inputBoxes
+export default createinputBoxes
 
