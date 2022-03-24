@@ -1,3 +1,4 @@
+//Creates the input boxes when Add New To-Do button is pressed
 import print from './printToDo'
 
 let content = document.getElementById('content')
@@ -24,7 +25,8 @@ function inputBoxes(){
     inputContainer.appendChild(desclabel);
     inputContainer.appendChild(desc)
 
-    const due = document.createElement("date");
+    const due = document.createElement("input");
+    due.type = 'date'
     due.name = "Due"
     due.setAttribute('id', 'due')
     const duelabel = document.createElement("Label");
