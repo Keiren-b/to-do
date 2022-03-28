@@ -1,12 +1,14 @@
 //Creates the input boxes when Add New To-Do button is pressed
-import print from './printToDo'
+
 import collectInputs from './todoInput'
+import * as render from './render'
 
 let content = document.getElementById('content')
 let inputContainer = document.createElement('div')
 inputContainer.setAttribute('id', 'inputContainer')
 function createinputBoxes(){
 
+  render.hide(inputContainer)
 
     const title = document.createElement("input");
     title.name = "Title";
