@@ -1,12 +1,12 @@
 import * as cacheDOM from './cacheDOM'
 
-const cardContainer = document.createElement('div')
-cardContainer.setAttribute('id', 'cardContainer')
+// const cardContainer = document.createElement('div')
+// cardContainer.setAttribute('id', 'cardContainer')
 
 // const content = document.getElementById('content')
-cacheDOM.content.appendChild(cardContainer)
+cacheDOM.content.appendChild(cacheDOM.cardContainer)
 
-// const inputContainer = document.getElementById('inputContainer')
+const inputContainer = document.getElementById('inputContainer')
 
 
 export function clearDivs(element){

@@ -13,6 +13,10 @@ import '/Users/keirenbrandt-sawdy/repos/javascript_pathway/to-do/src/style.css'
 newToDoBtn()
 createinputBoxes()
 
+const cardContainer = document.createElement('div')
+cardContainer.setAttribute('id', 'cardContainer')
+
+
 //.... for testing//
 
 let testBtn = document.createElement('button')
