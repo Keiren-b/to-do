@@ -1,0 +1,7 @@
+.container {
+    border: solid aqua 1px;
+    padding: 6px
+}
+#displayContainer {
+    display:flex
+}
