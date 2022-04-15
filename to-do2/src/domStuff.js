@@ -11,10 +11,11 @@ export function cacheDOM(){
     date: document.getElementById('due'),
     priority: document.getElementById('priority'),
     notes: document.getElementById('notes'),
-    printBtn: document.getElementById('printBtn')
+    printBtn: document.getElementById('printBtn'),
+    card: document.getElementById('card')
     }
 }
-console.log(cacheDOM.date)
+
 
 export function createDomElement(type, id, text, name, append){
     const elem = document.createElement(type);

@@ -1,8 +1,8 @@
 import './style.css'
 import * as domStuff from './domStuff'
 import inputs from './inputForm'
-import collectInputs from './storage'
 import * as storage from './storage'
+import renderCards from './render'
 
 
 
@@ -11,9 +11,9 @@ import * as storage from './storage'
 inputs()
 
 //testing functions
-
-        let x = domStuff.cacheDOM().printBtn
-        x.addEventListener('click', collectInputs)
+    
+        let x = document.getElementById('printBtn')
+        x.addEventListener('click', storage.collectInputs)
 
 
         const clearBtn = document.createElement('button')
@@ -25,14 +25,15 @@ inputs()
             localStorage.clear()
         }
 
-        const printStorage = document.createElement('button')
-        printStorage.textContent = 'printStorage'
-        printStorage.addEventListener('click', function(){
-            console.log(localStorage)
+        const printStorageBtn = document.createElement('button')
+        printStorageBtn.textContent = 'printStorage'       
+        domStuff.cacheDOM().bodyContainer.appendChild(printStorageBtn)
+        printStorageBtn.addEventListener('click',renderCards)
 
-        })
-        domStuff.cacheDOM().bodyContainer.appendChild(printStorage)
 
+
+        
+         
 //END of testing functions
 
 
