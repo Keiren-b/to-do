@@ -6,10 +6,12 @@ export function cacheDOM(){
     menuContainer:document.getElementById('menuContainer'),
     taskContainer: document.getElementById('taskContainer'),
     title: document.getElementById('title'),
-    titleLabel: document.getElementById('titleLabel')
+    titleLabel: document.getElementById('titleLabel'),
+    date: document.getElementById('due'),
+    priority: document.getElementById('priority')
     }
 }
-
+console.log(cacheDOM.date)
 
 export function createDomElement(type, id, text, name, append){
     const elem = document.createElement(type);
