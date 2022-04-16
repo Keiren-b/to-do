@@ -1,21 +1,22 @@
 import './style.css'
-import * as domStuff from './domStuff'
+import createDomElement from './createDomElement'
+import cacheDOM from './domStuff'
 
 function inputs(){
-domStuff.createDomElement('label','titleLabel','Title: ','Title',inputContainer)
-domStuff.createDomElement('input','title','','Title', inputContainer)
+createDomElement('label','titleLabel','Title: ','Title',inputContainer)
+createDomElement('input','title','','Title', inputContainer)
 
-domStuff.createDomElement('label','descLabel','Description: ','Description',inputContainer)
-domStuff.createDomElement('textarea','desc','','Description', inputContainer)
+createDomElement('label','descLabel','Description: ','Description',inputContainer)
+createDomElement('textarea','desc','','Description', inputContainer)
 
-domStuff.createDomElement('label','dueLabel','','Description', inputContainer)
-domStuff.createDomElement('input','due','','Due', inputContainer)
-let date = domStuff.cacheDOM().date
+createDomElement('label','dueLabel','','Description', inputContainer)
+createDomElement('input','due','','Due', inputContainer)
+let date = cacheDOM().date
 date.type = 'date'
 
-domStuff.createDomElement('label','priorityLabel','Priority: ','Priority', inputContainer)
-domStuff.createDomElement('select','priority','','Priority', inputContainer)
-let priority = domStuff.cacheDOM().priority
+createDomElement('label','priorityLabel','Priority: ','Priority', inputContainer)
+createDomElement('select','priority','','Priority', inputContainer)
+let priority = cacheDOM().priority
 let values = ['Low', 'Medium', 'High', 'Ugent']
     for (const val of values)
     {           var option = document.createElement("option");
@@ -24,10 +25,10 @@ let values = ['Low', 'Medium', 'High', 'Ugent']
                 priority.appendChild(option);
             }
 
-domStuff.createDomElement('label','notesLabel','Notes: ','Notes', inputContainer)
-domStuff.createDomElement('textarea','notes','','Notes', inputContainer)
+createDomElement('label','notesLabel','Notes: ','Notes', inputContainer)
+createDomElement('textarea','notes','','Notes', inputContainer)
 
-domStuff.createDomElement('button','printBtn','Add To-Do','printBtn', inputContainer)
+createDomElement('button','printBtn','Add To-Do','printBtn', inputContainer)
 }
 
 export default inputs

@@ -1,5 +1,5 @@
-export function cacheDOM(){
-    return{
+function cacheDOM(){
+        return{
     bodyContainer: document.getElementById('bodyContainer'),
     headerContainer: document.getElementById('headerContainer'),
     displayContainer: document.getElementById('displayContainer'),
@@ -15,13 +15,7 @@ export function cacheDOM(){
     card: document.getElementById('card')
     }
 }
+export default cacheDOM
 
 
-export function createDomElement(type, id, text, name, append){
-    const elem = document.createElement(type);
-    elem.setAttribute('id', id);
-    elem.setAttribute('name', name)
-    elem.textContent = text;
-    append.appendChild(elem)
-}
 

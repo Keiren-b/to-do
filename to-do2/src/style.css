@@ -5,3 +5,11 @@
 #displayContainer {
     display:flex
 }
+
+.test {
+    color: aqua;
+}
+
+.test2 {
+    color: crimson;
+}

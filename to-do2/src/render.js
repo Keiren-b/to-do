@@ -1,8 +1,9 @@
-import * as domStuff from './domStuff'
+import createDomElement from './createDomElement'
+import cacheDOM from './domStuff'
 
 function renderCards(){
-    clearDivs(domStuff.cacheDOM().taskContainer)
-    domStuff.cacheDOM().taskContainer.textContent='this is the task container'
+    clearDivs(cacheDOM().taskContainer)
+    cacheDOM().taskContainer.textContent='this is the task container'
     //
 
     for (let i=0; i<localStorage.length; i++){
@@ -20,6 +21,9 @@ function renderCards(){
             
             taskContainer.appendChild(card)
             }
+    }
+    for (let j=0; j<localStorage.length;j++){
+        createDomElement('button','deleteBtn','Delete Task','delete',taskContainer.children[j])
     }
 }
 

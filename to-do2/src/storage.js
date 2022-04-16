@@ -1,9 +1,10 @@
-import * as domStuff from './domStuff'
+import cacheDOM from './domStuff'
+import renderCards from './render'
 
 
 //testing functions
 const testPop = document.createElement('button')
-domStuff.cacheDOM().bodyContainer.appendChild(testPop)
+cacheDOM().bodyContainer.appendChild(testPop)
 testPop.textContent = 'test populate storage'
 function testPopulate(){
     for (let i=0; i<11; i++){
@@ -33,17 +34,17 @@ function populateStorage(x){
 
     function collectInputs(){
     
-        const title = domStuff.cacheDOM.title
-        const desc = cacheDOM().desc.value
-        const due = cacheDOM().date.value
-        const priority = cacheDOM().priority.valuee
-        const notes = cacheDOM().notes.value
+        const title = document.getElementById('title').value
+        const desc = document.getElementById('desc').value
+        const due = document.getElementById('due').value
+        const priority = document.getElementById('priority').value
+        const notes = document.getElementById('notes').value
         
         const newToDo = new Todo (title, desc, due, priority, notes)
-        
-        
-        
+                     
         populateStorage(newToDo)
+        renderCards()
+
         
     }
 
