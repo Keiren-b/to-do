@@ -12,10 +12,9 @@ function cacheDOM(){
     priority: document.getElementById('priority'),
     notes: document.getElementById('notes'),
     printBtn: document.getElementById('printBtn'),
-    card: document.getElementById('card')
+    card: document.getElementById('card'),
+    createProjectBtn: document.getElementById('newProject'),
+    newProjectContainer: document.getElementById('newProjectContainer'),
+        }
     }
-}
-export default cacheDOM
-
-
-
+    export default cacheDOM

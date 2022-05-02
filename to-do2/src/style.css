@@ -13,3 +13,6 @@
 .test2 {
     color: crimson;
 }
+.hidden {
+    display:none
+}

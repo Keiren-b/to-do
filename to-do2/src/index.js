@@ -3,12 +3,14 @@ import cacheDOM from './domStuff'
 import inputs from './inputForm'
 import collectInputs from './storage'
 import renderCards from './render'
+import createProject from './createProject'
 
 
 
 
 
 inputs()
+createProject()
 
 //testing functions
     
