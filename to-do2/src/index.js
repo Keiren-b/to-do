@@ -31,8 +31,6 @@ inputs()
         printStorageBtn.addEventListener('click',renderCards)
 
 
-
-        
          
 //END of testing functions
 

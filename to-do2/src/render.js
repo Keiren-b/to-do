@@ -1,5 +1,6 @@
 import createDomElement from './createDomElement'
 import cacheDOM from './domStuff'
+import removeCard from './delete'
 
 function renderCards(){
     clearDivs(cacheDOM().taskContainer)
@@ -23,7 +24,8 @@ function renderCards(){
             }
     }
     for (let j=0; j<localStorage.length;j++){
-        createDomElement('button','deleteBtn','Delete Task','delete',taskContainer.children[j])
+      createDomElement('button','deleteBtn','Delete Task','delete',taskContainer.children[j])
+     taskContainer.children[j].children[5].addEventListener('click', removeCard)
     }
 }
 
